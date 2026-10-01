@@ -20,7 +20,8 @@ const syncMessages = {
 } as const;
 
 const vividiaSocialLinks: Partial<Record<PlatformIcon, string>> = {
-  instagram: "https://www.instagram.com/vividia_oficial/",
+  youtube: "https://www.youtube.com/channel/UChS2DK198-2AV3wwCyTFIOQ",
+  instagram: "https://www.instagram.com/vividia_oficial?stkn=bm94a2psMm5jeGEz&utm_source=qr",
 };
 
 export function Dashboard() {
