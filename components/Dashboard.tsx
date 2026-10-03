@@ -20,6 +20,7 @@ const syncMessages = {
 } as const;
 
 const vividiaSocialLinks: Partial<Record<PlatformIcon, string>> = {
+  tiktok: "https://www.tiktok.com/@vividiaoficial?_r=1&_t=ZG-9AFlDubBW3k",
   youtube: "https://www.youtube.com/channel/UChS2DK198-2AV3wwCyTFIOQ",
   instagram: "https://www.instagram.com/vividia_oficial?stkn=bm94a2psMm5jeGEz&utm_source=qr",
   facebook: "https://www.facebook.com/profile.php?id=61594483178356",
