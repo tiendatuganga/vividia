@@ -22,7 +22,13 @@ const syncMessages = {
 const vividiaSocialLinks: Partial<Record<PlatformIcon, string>> = {
   youtube: "https://www.youtube.com/channel/UChS2DK198-2AV3wwCyTFIOQ",
   instagram: "https://www.instagram.com/vividia_oficial?stkn=bm94a2psMm5jeGEz&utm_source=qr",
+  facebook: "https://www.facebook.com/profile.php?id=61594483178356",
 };
+
+const vividiaDisplayPlatforms = [
+  ...vividiaPlatforms.filter((platform) => platform.icon !== "tiktok"),
+  ...vividiaPlatforms.filter((platform) => platform.icon === "tiktok"),
+];
 
 export function Dashboard() {
   const [selectedDate, setSelectedDate] = useState(getTodayKey);
@@ -52,7 +58,7 @@ export function Dashboard() {
         <DailyProgress completed={summary.completed} total={summary.total} percentage={summary.percentage} theme="green" />
 
         <section aria-label="Publicaciones por plataforma" className={`grid grid-cols-1 gap-4 transition-opacity duration-200 sm:gap-5 lg:grid-cols-2 ${isReady ? "opacity-100" : "pointer-events-none opacity-55"}`}>
-          {vividiaPlatforms.map((platform) => (
+          {vividiaDisplayPlatforms.map((platform) => (
             <PlatformCard
               key={platform.id}
               platform={platform}
